@@ -66,7 +66,7 @@ def elimina_esame(): # Crea la funzione per eliminare un esame
         esami_trovati = cursore.fetchall() # Recupero tutti i risultati della query e li salvo nella variabile "esami_trovati"
 
         if not esami_trovati: # Controllo se la lista esami_trovati è vuota
-            print(f"Nessun esame trovato conil nome '{esame_da_eliminnare}'.") # Messaggio se non ci sono esami con quel nome
+            print(f"Nessun esame trovato conil nome '{esame_da_eliminare}'.") # Messaggio se non ci sono esami con quel nome
             return # Eesco dalla funzione
         
         if len(esami_trovati) == 1: #Controllo se c'è un solo esame con quel nome, len serve a restituire  la lungheza della lista e quindi capire se è uguale ad 1
@@ -74,7 +74,7 @@ def elimina_esame(): # Crea la funzione per eliminare un esame
             print(f"L'esame '{esame_da_eliminare}' è stato eliminato con successo.") # Messaggio di conferma
 
         else: # Se ci sono più esami con quel nome
-            print(f"Sono presenti più esami con il nome '{esame_da_elilminare}'.")
+            print(f"Sono presenti più esami con il nome '{esame_da_eliminare}'.")
             for esame in esami_trovati: # Ciclo iterativamente su ogni esame nella lista esami_trovati
                 print(f"ID: {esame[0]} | Nome: {esame[1]} | Data: {esame[2]} | CFU: {esame[3]} | Pragrafi totali: {esame[4]} | Paragrafi già studiati: {esame[5]}") # Stampo i dettagli di ogni esame trovato
 
